@@ -43,6 +43,9 @@ import json, requests
 APIkey = '9d5143a6d6866b4cfcde6299838c91aa'
 location = input(' insert location ')
 
+location = st.text_input('Gimme a location', '<enter a location here>')
+st.write('The current location title is', location)
+
 # check API documentation to see what structure of URL is needed to access the data
 # http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
