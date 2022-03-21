@@ -31,7 +31,10 @@ print(weatherData['main']['temp_max'])
 
 st.text(weatherData['main']['temp_max'])
 
-st.text(------------------------------------------------------------)
+
+
+
+
 
 # ! python3
 import json, requests 
