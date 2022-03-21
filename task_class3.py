@@ -9,8 +9,16 @@ import json, requests
 APIkey = '9d5143a6d6866b4cfcde6299838c91aa'
 #location = input(' insert location ')
 
-location = st.text_input('Gimme a location', ' rome ')
-st.write('The current location title is', location)
+genre = st.radio("Select a city",('Bozen', 'Milan', 'Rome'), help='click one of the option')
+if genre == 'Bozen':
+     location = 'Bozen'
+elif genre == 'Milan':
+     location = 'Milan'
+else:
+     location = 'Rome'
+
+#location = st.text_input('Gimme a location', ' rome ')
+#st.write('The current location title is', location)
 
 # check API documentation to see what structure of URL is needed to access the data
 # http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
