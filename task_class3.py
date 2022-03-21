@@ -43,5 +43,5 @@ weatherData = json.loads(response.text)
 
 print(weatherData['main']['temp_max']) 
 # more???????????
-st.text(weatherData['main']['temp_max'])
-st.text(weatherData)
+st.write(weatherData['main']['temp_max'])
+st.write(weatherData)
