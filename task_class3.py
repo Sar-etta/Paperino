@@ -41,9 +41,9 @@ import json, requests
 
 # add your own APIkey
 APIkey = '9d5143a6d6866b4cfcde6299838c91aa'
-location = input(' insert location ')
+#location = input(' insert location ')
 
-location = st.text_input('Gimme a location', '<enter a location here>')
+location = st.text_input('Gimme a location', ' rome ')
 st.write('The current location title is', location)
 
 # check API documentation to see what structure of URL is needed to access the data
