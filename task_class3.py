@@ -28,3 +28,5 @@ weatherData = json.loads(response.text)
 
 print(weatherData['main']['temp_max']) 
 # more???????????
+
+st.text("weatherData['main']['temp_max'])
