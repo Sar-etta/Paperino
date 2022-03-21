@@ -48,5 +48,5 @@ st.write(weatherData)
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Temperature", weatherData['main']['temp'])
-col2.metric("Wind", weatherData['visibility']['wind'])
+col2.metric("Wind", weatherData['wind']['speed'])
 col3.metric("Humidity", weatherData['main']['humidity'])
