@@ -9,13 +9,15 @@ import json, requests
 APIkey = '9d5143a6d6866b4cfcde6299838c91aa'
 #location = input(' insert location ')
 
-genre = st.radio("Select a city",('Bozen', 'Milan', 'Rome'), help='click one of the option')
-if genre == 'Bozen':
-     location = 'Bozen'
-elif genre == 'Milan':
-     location = 'Milan'
-else:
-     location = 'Rome'
+#genre = st.radio("Select a city",('Bozen', 'Milan', 'Rome'), help='click one of the option')
+#if genre == 'Bozen':
+#     location = 'Bozen'
+#elif genre == 'Milan':
+#     location = 'Milan'
+#else:
+#     location = 'Rome'
+
+location = st.radio("Select a city",('Bozen', 'Milan', 'Rome'), help='click one of the option')
 
 #location = st.text_input('Gimme a location', ' rome ')
 #st.write('The current location title is', location)
