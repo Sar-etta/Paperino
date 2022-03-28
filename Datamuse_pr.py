@@ -30,4 +30,4 @@ dataFromDatamuse = json.loads(response.text)
 #Uncomment to see a better readable version:
 #pprint(dataFromDatamuse) #dont forget to import the correct pprint library to make this work
 #pprint(dataFromDatamuse[0]['word'])#nope-->if you just want to see the first 9 results
-st.write(dataFromDatamuse[['word'])
+st.write(dataFromDatamuse['word'])
