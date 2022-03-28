@@ -5,7 +5,7 @@ from pprint import pprint
 
 
 keyword = st.selectbox('What do you want to do?', ('meaning', 'sound', 'spelling'))
-st.write('You selected:', keyword):
+st.write('You selected:', keyword)
 
 #keyword=input('plz give me a keyword ')
 url= 'https://api.datamuse.com/words?ml=' + keyword + '&max=10' ############
