@@ -4,8 +4,10 @@ import json,requests
 from pprint import pprint
 
 
-keyword = st.selectbox('What do you want to do?', ('meaning', 'sound', 'spelling'))
-st.write('You selected:', keyword)
+option = st.selectbox('What do you want to do?', ('meaning', 'sound', 'spelling'))
+st.write('You selected:', option)
+
+keyword = st.text_input('Gimme a word', ' ... ')
 
 #keyword=input('plz give me a keyword ')
 url= 'https://api.datamuse.com/words?ml=' + keyword + '&max=10' ############
