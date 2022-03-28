@@ -9,8 +9,12 @@ st.write('You selected:', option)
 
 keyword = st.text_input('Gimme a word', ' ... ')
 
-#keyword=input('plz give me a keyword ')
-url= 'https://api.datamuse.com/words?ml=' + keyword + '&max=10' ############
+if option == 'meaning':
+  url= 'https://api.datamuse.com/words?ml=' + keyword + '&max=10' ############
+  elif option == 'sound':
+    url= 'https://api.datamuse.com/words?sl=' + keyword + '&max=10'
+  else:
+    url= 'https://api.datamuse.com/words?sp=' + keyword + '&max=10'
 
 
 #Step3: Download the JSON data from the API.
