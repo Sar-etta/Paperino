@@ -11,9 +11,9 @@ keyword = st.text_input('Gimme a word', ' ... ')
 
 if option == 'meaning':
   url= 'https://api.datamuse.com/words?ml=' + keyword + '&max=10' ############
-  elif option == 'sound':
+elif option == 'sound':
     url= 'https://api.datamuse.com/words?sl=' + keyword + '&max=10'
-  else:
+else:
     url= 'https://api.datamuse.com/words?sp=' + keyword + '&max=10'
 
 
