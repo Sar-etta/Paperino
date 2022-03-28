@@ -33,4 +33,4 @@ dataFromDatamuse = json.loads(response.text)
 ######)giusto anche###st.write(dataFromDatamuse[0]['word'])
 
 for eachentry in dataFromDatamuse:
-  st.write(eachentry[0]['word'])
+  st.write(dataDromDatamuse[0]['word'])
