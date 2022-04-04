@@ -5,10 +5,9 @@ from googletrans import Translator
 translator=Translator()
 
 word = st.text_input(" Gimme a word you want to translate to italian: ", "...")
+targetl = st.text_input(" write the two letter of the destination language: ", "...")
 
-trans_it= translator.translate (word, dest= "it")
+trans= translator.translate (word, dest= targetl)
 
-st.write(trans_it.text)
-
-
+st.write(trans.text)
 
