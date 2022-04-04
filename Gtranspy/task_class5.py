@@ -7,7 +7,7 @@ from googletrans import Translator
 
 translator=Translator()
 
-word = st.text_input(" Gimme a word you want to translate to italian: ")
+word = st.text_input(" Gimme a word you want to translate to italian: ", "...")
 
 trans_it= translator.translate (word, dest= "it")
 
