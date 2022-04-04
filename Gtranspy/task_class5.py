@@ -1,6 +1,6 @@
-st.header(Task about Googletrans for Python)
-
 import streamlit as st
+
+st.header(Task about Googletrans for Python)
 
 from googletrans import Translator
 
