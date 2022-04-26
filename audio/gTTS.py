@@ -1,6 +1,6 @@
 import streamlit as st
 
-click<=8.0.4
+
 
 from gtts import gTTS
 from googletrans import Translator
