@@ -1,17 +1,31 @@
+import streamlit as st
+
+click<=8.0.4
+
 from gtts import gTTS
 from googletrans import Translator
 
 translator = Translator()
 
-text=input('please type some text: ') #original text
-destlang= input('tell me a two etter code for the det lang: ')
-abc = translator.translate(text, dest=destlang) #translated text
+originaltext = st.text_input(" Gimme a word you want to translate to italian: ", "...")
+targetl = st.text_input(" write the two letter of the destination language: ", "it")
 
-print(abc.text) #-->translated text
+trans= translator.translate (originaltext, dest= targetl)
 
-firsta=gTTS(abc.text, destlang) #i need translated text
-firsta.save('audiof.mp3')
+st.write(trans.text)
 
+
+
+firstaudio=gTTS(trans.text, targetl) 
+firstaudio.save('audiof.mp3')
+
+st.audio(
 
 print('your audio: ')
-ipd.display(ipd.Audio('audiof.mp3')) #it's a string
+ipd.display(ipd.Audio('audiof.mp3')) 
+
+
+audio_file = open('myaudio.ogg', 'rb')
+audio_bytes = audio_file.read()
+
+st.audio(audio_bytes, format='audio/ogg')
