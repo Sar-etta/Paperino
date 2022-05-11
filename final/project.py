@@ -11,7 +11,7 @@ my_api_secret = "X0RQoYDH3AjwvpBwRxcf8RdTvPg6WtDHDcNHglkI8C0SHqd3s5"
 auth = tw.OAuthHandler(my_api_key, my_api_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
-search_query = input("insert a word precedeed by #: ")   #-filter:retweets)
+search_query = st.text_input("insert a word precedeed by #: ")   #-filter:retweets)
 
 # get tweets from the API
 tweets = tw.Cursor(api.search,
@@ -24,7 +24,7 @@ tweets_copy = []
 for tweet in tweets:
     tweets_copy.append(tweet)
     
-print("Total Tweets fetched:", len(tweets_copy))
+st.text("Total Tweets fetched:", len(tweets_copy))
 
 import pandas as pd
 
