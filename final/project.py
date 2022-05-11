@@ -1,3 +1,5 @@
+import streamlit as st
+
 st.title("try-out project")
 
 #pip install tweepy
