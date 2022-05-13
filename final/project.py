@@ -8,8 +8,8 @@ st.title("try-out project")
 import tweepy as tw
 
 # your Twitter API key and API secret
-my_api_key = "4sjNAG1V9tJ4g0o3JklYvgsuu"
-my_api_secret = "X0RQoYDH3AjwvpBwRxcf8RdTvPg6WtDHDcNHglkI8C0SHqd3s5"
+my_api_key = "XXXXXX da inserire XXXXXX"
+my_api_secret = "XXXXXX da inserire XXXXXX"
 
 # authenticate
 auth = tw.OAuthHandler(my_api_key, my_api_secret)
