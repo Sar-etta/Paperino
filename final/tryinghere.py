@@ -8,8 +8,8 @@ import streamlit as st
 import pandas as pd
 from transformers import pipeline
 
-consumer_key = 'XXX da inserire XXX'
-consumer_secret = 'XXX da inserire XXX'
+consumer_key = '4sjNAG1V9tJ4g0o3JklYvgsuu'
+consumer_secret = 'X0RQoYDH3AjwvpBwRxcf8RdTvPg6WtDHDcNHglkI8C0SHqd3s5'
 access_token = 'type your Access token here'
 access_token_secret = 'type your Access token secret here'
 auth = tw.OAuthHandler(consumer_key, consumer_secret)
