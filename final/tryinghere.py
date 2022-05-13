@@ -3,10 +3,10 @@ import streamlit as st
 import pandas as pd
 from transformers import pipeline
 
-consumer_key = '4sjNAG1V9tJ4g0o3JklYvgsuu'
-consumer_secret = 'X0RQoYDH3AjwvpBwRxcf8RdTvPg6WtDHDcNHglkI8C0SHqd3s5'
-access_token = '380295446-ZudqsCyxgvSeGlW2avP3t5URn0sgATd0xRzIk2dn'
-access_token_secret = '77H7DwA9Ldg3KIzmXIGA00eDaj4sOQAAAqRdF6r2hOKef'
+consumer_key = 'XXXXXX da inserire XXXXXX'
+consumer_secret = 'XXXXXX da inserire XXXXXX'
+access_token = 'XXXXXX da inserire XXXXXX'
+access_token_secret = 'XXXXXX da inserire XXXXXX'
 auth = tw.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
