@@ -59,4 +59,4 @@ for tweet in tweets_copy:
 # show the dataframe
 st.write(tweets_df.head())
 
-#st.text(tweets_df["text"])
+st.text(tweets_df["text"])
