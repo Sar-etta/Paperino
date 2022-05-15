@@ -57,6 +57,6 @@ for tweet in tweets_copy:
     tweets_df = tweets_df.reset_index(drop=True)
 
 # show the dataframe
-tweets_df.head()
+st.write(tweets_df.head())
 
 #st.text(tweets_df["text"])
