@@ -30,7 +30,7 @@ tweets_copy = []
 for tweet in tweets:
     tweets_copy.append(tweet)
     
-st.text("Total Tweets fetched:", len(tweets_copy))
+st.write("Total Tweets fetched:", len(tweets_copy))
 
 #import pandas as pd
 
