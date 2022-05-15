@@ -1,11 +1,13 @@
+import tweepy as tw
 import streamlit as st
+import pandas as pd
 
 st.title("try-out project")
 
 #pip install tweepy
 
 # import tweepy
-import tweepy as tw
+#import tweepy as tw
 
 # your Twitter API key and API secret
 my_api_key = "XXXXXX da inserire XXXXXX"
@@ -30,7 +32,7 @@ for tweet in tweets:
     
 st.text("Total Tweets fetched:", len(tweets_copy))
 
-import pandas as pd
+#import pandas as pd
 
 # intialize the dataframe
 tweets_df = pd.DataFrame()
