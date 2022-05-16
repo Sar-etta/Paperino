@@ -1,7 +1,7 @@
 import tweepy as tw
 import streamlit as st
 import pandas as pd
-import TextBlob
+
 
 st.title("try-out project")
 
