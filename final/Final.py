@@ -68,6 +68,8 @@ st.write(tweets_in_str)
 
 
 
+import TextBlob
+
 polarity_score = []
 
 for i in range(0, new_tweets_df.shape[0]):
