@@ -19,7 +19,7 @@ search_query = st.text_input('What topic are you interest in?')   #-filter:retwe
 tweets = tw.Cursor(api.search_tweets,
               q=search_query,
               lang="en",
-              since="2020-09-16").items(50)
+              since="2020-09-16").items(250)
 
 # store the API responses in a list
 tweets_copy = []
@@ -53,7 +53,9 @@ for tweet in tweets_copy:
     tweets_df = tweets_df.reset_index(drop=True)
 
 # show the dataframe
-st.write(tweets_df.head())
+#st.write(tweets_df.head())
+with st.expander("If you click here, you can see the fisrt tweets analyzed!"):
+     st.write(tweets_df.head())
 
 #these are just the tweets of the dataframe
 #st.text(tweets_df["text"])
