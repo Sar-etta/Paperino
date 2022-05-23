@@ -124,6 +124,9 @@ import googletrans
 from gtts import gTTS
 from googletrans import Translator
 
+import json,requests
+from pprint import pprint
+
 translator = Translator()
 
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
