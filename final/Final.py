@@ -116,3 +116,18 @@ plt.show()
 
 st.balloons()
 st.pyplot(fig)
+
+#############################################################################
+
+from gtts import gTTS
+from googletrans import Translator
+
+translator = Translator()
+
+option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
+if option == 'Yes':
+  targetl = st.text_input(" write the two letter of the destination language: ", "it")
+  trans= translator.translate (tweets_df["text"], dest= targetl)
+  st.write('the translation: ', trans.text)
+else:
+  pass
