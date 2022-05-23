@@ -30,7 +30,7 @@ st.write("Total Tweets fetched:", len(tweets_copy))
 
 with st.spinner('Be patient, the analysis will be ready soon!'):
     time.sleep(5)
-#st.success('Done!')
+st.success('Done!')
 
 import pandas as pd
 
