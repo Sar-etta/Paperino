@@ -15,7 +15,7 @@ api = tw.API(auth, wait_on_rate_limit=True)
 search_query = st.text_input("insert a word precedeed by #: ")   #-filter:retweets)
 
 # get tweets from the API
-tweets = tw.Cursor(api.search,
+tweets = tw.Cursor(api.search_tweets,
               q=search_query,
               lang="en",
               since="2020-09-16").items(50)
