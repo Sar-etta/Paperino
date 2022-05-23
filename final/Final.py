@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("Sentiment Analysis through Twitter")
-st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarize the general opinion of it.")
+st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarized the general opinion of it.")
 
 import tweepy as tw
 
@@ -54,7 +54,7 @@ for tweet in tweets_copy:
 
 # show the dataframe
 #st.write(tweets_df.head())
-with st.expander("If you click here, you can see the fisrt tweets analyzed!"):
+with st.expander("If you click here, you can see the first tweets that have been analyzed!"):
      st.write(tweets_df.head())
 
 #these are just the tweets of the dataframe
@@ -94,9 +94,10 @@ for el in polarity_score:
     positive +=1
   else:
     pass
-st.write('the negative tweets are: ', negative)
-st.write('the neutral tweets are: ', neutral)
-st.write('the positive tweets are: ', positive)
+st.write('These are the overall results of the sentiment analysis:')
+st.write('the negative tweets analyzed are: ', negative)
+st.write('the neutral tweets analyzed are: ', neutral)
+st.write('the positive tweets analyzed are: ', positive)
 
 
 
