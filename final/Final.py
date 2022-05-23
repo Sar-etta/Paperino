@@ -119,6 +119,8 @@ st.pyplot(fig)
 
 #############################################################################
 
+import gtts
+import googletrans
 from gtts import gTTS
 from googletrans import Translator
 
