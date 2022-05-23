@@ -4,3 +4,4 @@ pandas
 transformers
 tensorflow
 textblob
+matplotlib
