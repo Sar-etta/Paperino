@@ -1,8 +1,5 @@
 import streamlit as st
 
-from PIL import Image
-image = Image.open('twitter_logo_banner.png')
-
 st.image(image, caption='Sunrise by the mountains')
 st.title("Sentiment Analysis through Twitter")
 st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarize the general opinion of it.")
