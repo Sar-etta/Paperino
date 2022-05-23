@@ -68,10 +68,8 @@ st.write(tweets_in_str)
 
 
 
-import subprocess
-cmd = ['python3','-m','textblob.download_corpora']
-subprocess.run(cmd)
-print("Working")
+import textblob
+from textblob import TextBlob
 
 
 
