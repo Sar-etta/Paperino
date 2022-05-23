@@ -69,10 +69,7 @@ st.write(tweets_in_str)
 
 
 #import TextBlob
-import subprocess
-import sys
-
-subprocess.run([f"{sys.executable}", "script.py"])
+import utils.py
 
 
 
