@@ -108,7 +108,9 @@ import numpy as np
 y = np.array([negative, neutral, positive])
 mylabels = ["negative", "neutral", "positive"]
 
+fig = plt.figure(figsize=(10, 4))
 plt.pie(y, labels = mylabels, startangle = 90)
 plt.show() 
 
-st.pyplot(figure)
+st.balloons()
+st.pyplot(fig)
