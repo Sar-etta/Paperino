@@ -1,10 +1,11 @@
 import streamlit as st
 
-with st.container():
-    st.write("This is inside the container")
+st.bar_chart({"data": [1, 5, 2, 6, 2, 1]})
 
-    # You can call any Streamlit command, including custom components:
-    st.write("surprise")
-    st.balloons
-
-st.write("This is outside the container")
+with st.expander("See explanation"):
+     st.write("""
+         The chart above shows some numbers I picked for you.
+         I rolled actual dice for these, so they're *guaranteed* to
+         be random.
+     """)
+     st.image("https://static.streamlit.io/examples/dice.jpg")
