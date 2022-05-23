@@ -69,7 +69,12 @@ st.write(tweets_in_str)
 
 
 #import TextBlob
-import corpora
+import subprocess
+import sys
+
+subprocess.run([f"{sys.executable}", "script.py"])
+
+
 
 polarity_score = []
 
