@@ -28,6 +28,10 @@ for tweet in tweets:
     
 st.write("Total Tweets fetched:", len(tweets_copy))
 
+with st.spinner('Be patient, the analysis will be ready soon!'):
+    time.sleep(5)
+#st.success('Done!')
+
 import pandas as pd
 
 # intialize the dataframe
@@ -94,7 +98,7 @@ for el in polarity_score:
     positive +=1
   else:
     pass
-st.write('These are the overall results of the sentiment analysis:')
+st.write('These are the overall results of the sentiment analysis:', textColor = green)
 st.write('the negative tweets analyzed are: ', negative)
 st.write('the neutral tweets analyzed are: ', neutral)
 st.write('the positive tweets analyzed are: ', positive)
