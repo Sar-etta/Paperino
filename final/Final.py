@@ -68,7 +68,8 @@ st.write(tweets_in_str)
 
 
 
-import TextBlob
+#import TextBlob
+import corpora
 
 polarity_score = []
 
