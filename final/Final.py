@@ -55,36 +55,31 @@ for tweet in tweets_copy:
 # show the dataframe
 st.write(tweets_df.head())
 
-st.text(tweets_df["text"])
+#these are just the tweets of the dataframe
+#st.text(tweets_df["text"])
 
-
-
+#the dataframe with fewer columns, if later i want to append the polarity column
 new_tweets_df = tweets_df.loc[ 0: ,['user_name', 'user_location', 'text']]
-st.write(new_tweets_df.head())
+#st.write(new_tweets_df.head())
 
-
-
+#in theory they are string, but i think they are just a column of the dataframe like before
 tweets_in_str = new_tweets_df.text.astype(str)
-st.write(tweets_in_str)
-
-
+#st.write(tweets_in_str)
 
 import textblob
 from textblob import TextBlob
 
-
-
 polarity_score = []
-
+#for-loop to analyze the sentiment
 for i in range(0, new_tweets_df.shape[0]):
   score = TextBlob(tweets_df.iloc[i]["text"])
   score1 = score.sentiment[0]
   polarity_score.append(score1)
-  st.write(score1)
+  #st.write(score1)
   
   
-  
-  negative = 0
+#to count the neg/neu/pos
+negative = 0
 neutral = 0
 positive = 0
 
