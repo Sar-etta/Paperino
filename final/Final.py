@@ -28,6 +28,7 @@ for tweet in tweets:
     
 st.write("Total Tweets fetched:", len(tweets_copy))
 
+time = 0
 with st.spinner('Be patient, the analysis will be ready soon!'):
     time.sleep(5)
 st.success('Done!')
