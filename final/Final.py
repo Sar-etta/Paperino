@@ -129,6 +129,8 @@ from pprint import pprint
 
 translator = Translator()
 
+tweets_df = tweets_df.to_json()
+
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
   targetl = st.text_input(" write the two letter of the destination language: ", "it")
