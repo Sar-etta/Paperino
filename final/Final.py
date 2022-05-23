@@ -13,7 +13,7 @@ my_api_secret = "QPjcJF2cZAtmoNira5svbAXkKWuL7Ou0FnFcWpiyRScfvL7dzl"
 auth = tw.OAuthHandler(my_api_key, my_api_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
-search_query = st.text_input('What topic are you interest in?', '<insert an # before typing the word/topic you are interested in!>')   #-filter:retweets)
+search_query = st.text_input('What topic are you interest in?')   #-filter:retweets)
 
 # get tweets from the API
 tweets = tw.Cursor(api.search_tweets,
