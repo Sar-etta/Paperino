@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Sentiment Analysis through Twitter", '<insert an "#" before typing the word/topic you are interested in!>')
+st.title("Sentiment Analysis through Twitter")
 st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarize the general opinion of it.")
 
 import tweepy as tw
@@ -13,7 +13,7 @@ my_api_secret = "QPjcJF2cZAtmoNira5svbAXkKWuL7Ou0FnFcWpiyRScfvL7dzl"
 auth = tw.OAuthHandler(my_api_key, my_api_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
-search_query = st.text_input("insert a word precedeed by #: ")   #-filter:retweets)
+search_query = st.text_input("What topic are you interest in?", "<insert an '#' before typing the word/topic you are interested in!>")   #-filter:retweets)
 
 # get tweets from the API
 tweets = tw.Cursor(api.search_tweets,
