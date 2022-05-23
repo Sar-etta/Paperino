@@ -98,7 +98,7 @@ for el in polarity_score:
     pass
 st.write('These are the overall results of the sentiment analysis:', textColor = #5F9EA0)
 st.write('the negative tweets analyzed are: ', negative)
-st.write('the neutral tweets analyzed are: ', neutral)
+#st.write('the neutral tweets analyzed are: ', neutral)
 st.write('the positive tweets analyzed are: ', positive)
 
 
