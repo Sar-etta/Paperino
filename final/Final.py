@@ -130,8 +130,7 @@ from pprint import pprint
 
 translator = Translator()
 
-tweets_in_json = json.dumps(tweets_in_str)
-st.write('eccoci: ', tweets_in_json)
+tweets_in_json = json.dumps(tweets_df)
 
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
