@@ -1,12 +1,5 @@
 import streamlit as st
 
-#from PIL import Image
-#opening the image
-#image = Image.open('twitter_logo_banner.jpg')
-#displaying the image on streamlit app
-#st.image(image, caption='Enter any caption here')
-
-
 urlfoto = "https://raw.githubusercontent.com/Sar-etta/Paperino/main/final/twitter_logo_banner.jpg"
 st.image(urlfoto)
 
