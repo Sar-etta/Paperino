@@ -19,7 +19,7 @@ search_query = st.text_input('What topic are you interest in?', help='insert # b
 tweets = tw.Cursor(api.search_tweets,
               q=search_query,
               lang="en",
-              since="2020-09-16").items(250)
+              since="2020-09-16").items(50)
 
 # store the API responses in a list
 tweets_copy = []
