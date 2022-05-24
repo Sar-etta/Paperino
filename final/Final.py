@@ -136,18 +136,18 @@ import googletrans
 from gtts import gTTS
 from googletrans import Translator
 
-#import json,requests
-#from pprint import pprint
+import json,requests
+from pprint import pprint
 
 translator = Translator()
 
-#tweets_df_json = new_tweets_df.text.to_json()
-#st.write(tweets_df_json)
+tweets_df_json = new_tweets_df.text.to_json()
+st.write(tweets_df_json)
 
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
   targetl = st.text_input(" write the two letter of the destination language: ", "it")
-  trans= translator.translate (new_tweets_df, dest= targetl)
+  trans= translator.translate (tweets_df_json, dest= targetl)
   st.write('the translation: ', trans.text)
 else:
   pass
