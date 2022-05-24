@@ -7,7 +7,7 @@ import streamlit as st
 #st.image(image, caption='Enter any caption here')
 
 
-urlfoto = "https://raw.githubusercontent.com/Sar-etta/Paperino/final/twitter_logo_banner.jpg"
+urlfoto = "https://raw.githubusercontent.com/Sar-etta/Paperino/main/twitter_logo_banner.jpg"
 st.image(urlfoto)
 
 st.title("Sentiment Analysis through Twitter")
