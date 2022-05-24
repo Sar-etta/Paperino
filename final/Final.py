@@ -130,12 +130,13 @@ from pprint import pprint
 
 translator = Translator()
 
-tweets_in_json = tweets_df.to_json()
+tweets_df_json = tweets_df.to_json()
+st.write(tweets_df_json
 
-option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
-if option == 'Yes':
-  targetl = st.text_input(" write the two letter of the destination language: ", "it")
-  trans= translator.translate (tweets_in_str, dest= targetl)
-  st.write('the translation: ', trans.text)
-else:
-  pass
+#option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
+#if option == 'Yes':
+#  targetl = st.text_input(" write the two letter of the destination language: ", "it")
+#  trans= translator.translate (tweets_df_json, dest= targetl)
+#  st.write('the translation: ', trans.text)
+#else:
+#  pass
