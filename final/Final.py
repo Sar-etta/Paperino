@@ -134,7 +134,7 @@ from pprint import pprint
 
 translator = Translator()
 
-tweets_df_json = json.dumps(new_tweets_df.to_dict()) #new_tweets_df.text.to_json()
+tweets_df_json = json.dumps(new_tweets_df.text.to_dict()) #new_tweets_df.text.to_json() --> sono la stessa cosa
 st.write(tweets_df_json)
 
 # Iterate over key/value pairs in dict and print them
