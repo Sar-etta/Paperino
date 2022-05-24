@@ -130,7 +130,7 @@ from pprint import pprint
 
 translator = Translator()
 
-tweets_in_json = json.dumps(tweets_df)
+tweets_in_json = tweets_df.to_json()
 
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
