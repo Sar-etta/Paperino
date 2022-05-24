@@ -136,6 +136,8 @@ translator = Translator()
 
 tweets_df_json = new_tweets_df.text.to_json()
 st.write(tweets_df_json)
+pd.json_normalize(tweets_df_json)
+st.write(tweets_df_json)
 
 # Iterate over key/value pairs in dict and print them
 #for key, value in tweets_df_json.items():
