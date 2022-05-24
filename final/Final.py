@@ -56,7 +56,7 @@ for tweet in tweets_copy:
 
 # show the dataframe
 #st.write(tweets_df.head())
-with st.expander("If you click here, you can see the first tweets that have been analyzed!"):
+with st.expander("If you click here, you can see the first tweets that have been collected!"):
      st.write(tweets_df.head())
 
 #these are just the tweets of the dataframe
@@ -98,9 +98,13 @@ for el in polarity_score:
     pass
 
 #st.write('These are the overall results of the sentiment analysis:', textColor = #5F9EA0)
-st.write('the negative tweets analyzed are: ', negative)
-st.write('the neutral tweets analyzed are: ', neutral)
-st.write('the positive tweets analyzed are: ', positive)
+st.write('these are the overall result of the analysis:'
+         'the negative tweets analyzed are: ', negative,
+         'the neutral tweets analyzed are: ', neutral,
+         'the positive tweets analyzed are: ', positive)
+#st.write('the negative tweets analyzed are: ', negative)
+#st.write('the neutral tweets analyzed are: ', neutral)
+#st.write('the positive tweets analyzed are: ', positive)
 
 
 
