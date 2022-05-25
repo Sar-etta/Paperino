@@ -151,8 +151,10 @@ if option == 'Yes':
     itrans = translator.translate (text, dest = targetl)
     st.write('the translation: ', itrans.text)
   st.info("Thank you for using this App!")
+  st.snow()
 else:
   st.info("Thank you for using this App!")
+  st.snow()
   pass
 
 #########################################à
