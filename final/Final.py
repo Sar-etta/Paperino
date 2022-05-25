@@ -149,10 +149,7 @@ if option == 'Yes':
   for _, row in new_tweets_df.iterrows():
     text = row["text"]
     itrans = translator.translate (text, dest = targetl)
-    all_tweets_translation = itrans.text
-    #st.write('the translation: ', itrans.text)
-  with st.expander("Click here and you will find the translation of the tweets"):
-    st.write('the translation: ', all_tweets_translation)
+    st.write('the translation: ', itrans.text)
 else:
   pass
 
@@ -161,5 +158,6 @@ else:
 st.markdown("""---""")
 
 st.write("Credits:")
-st.write("""
-- ##########""")
+st.write("""- How to use Tweepy and Pandas Dataframe: https://datascienceparichay.com/article/get-data-from-twitter-api-in-python-step-by-step-guide/""")
+st.write("""- For the Sentiment Analysis through Textblob: https://neptune.ai/blog/sentiment-analysis-python-textblob-vs-vader-vs-flair""")
+st.write("""- How to use Matplotlib: https://pythonwife.com/matplotlib-with-streamlit/""")
