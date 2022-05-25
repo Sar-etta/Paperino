@@ -150,7 +150,9 @@ if option == 'Yes':
     text = row["text"]
     itrans = translator.translate (text, dest = targetl)
     st.write('the translation: ', itrans.text)
+  st.info("Thank you for using this App!")
 else:
+  st.info("Thank you for using this App!")
   pass
 
 #########################################à
