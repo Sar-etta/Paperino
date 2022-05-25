@@ -149,7 +149,7 @@ if option == 'Yes':
   for _, row in new_tweets_df.iterrows():
     text = row["text"]
     itrans = translator.translate (text, dest = targetl)
-    with st.expander("Click here and you will find the translation of the tweets")
+    with st.expander("Click here and you will find the translation of the tweets"):
         st.write('the translation: ', itrans.text)
 else:
   pass
