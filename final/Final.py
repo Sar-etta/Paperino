@@ -4,7 +4,7 @@ urlfoto = "https://raw.githubusercontent.com/Sar-etta/Paperino/main/final/twitte
 st.image(urlfoto)
 
 st.title("Sentiment Analysis through Twitter")
-st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarized the general opinion of it. To use it, just write down the topic you want analyzed, for example: #Zendaya, #covid and so on, and at the end one can decide if translating the tweets or not.")
+st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarized the general opinion of it. To use it, just write down the topic you want analyzed, for example: #Zendaya, #covid and so on, and at the end one can decide if translating the tweets or not. #HaveFun!")
 
 import tweepy as tw
 
@@ -16,7 +16,7 @@ my_api_secret = "QPjcJF2cZAtmoNira5svbAXkKWuL7Ou0FnFcWpiyRScfvL7dzl"
 auth = tw.OAuthHandler(my_api_key, my_api_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
-search_query = st.text_input('What topic are you interest in?', help='A suggestion: insert # before typing the topic you are interested in!')   #-filter:retweets)
+search_query = st.text_input('What topic are you interest in?', "#Zendaya", help='A suggestion: insert # before typing the topic you are interested in!')   #-filter:retweets)
   
   
 # get tweets from the API
@@ -103,9 +103,9 @@ for el in polarity_score:
 
 #st.write('These are the overall results of the sentiment analysis:', textColor = #5F9EA0)
 st.subheader('These are the overall result of the analysis:')
-st.write('the negative tweets analyzed are: ', negative)
-st.write('the neutral tweets analyzed are: ', neutral)
-st.write('the positive tweets analyzed are: ', positive)
+st.write('- The negative tweets analyzed are: ', negative)
+st.write('- The neutral tweets analyzed are: ', neutral)
+st.write('- The positive tweets analyzed are: ', positive)
 
 
 
@@ -142,12 +142,14 @@ translator = Translator()
 # --> con il codice commentato alla linea 137, se provavo a ordinarlo con questo for-loop mi diceva che non si poteva perché non dict
 #MI DA SEMPRE ERROREEEEEEEEE
 
+st.subheader("Here you can translate the Tweets fetched")
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
-  targetl = st.text_input(" write the two letter of the destination language: ", "it")
+  targetl = st.text_input(" write the two letter of the destination language: ", help="write a two letter code for the language you want to translate in. For example: it, de, es, en...")
   for _, row in new_tweets_df.iterrows():
     text = row["text"]
     itrans = translator.translate (text, dest = targetl)
-    st.write('the translation: ', itrans.text)
+    with st.expander("Click here and you will find the translation of the tweets")
+        st.write('the translation: ', itrans.text)
 else:
   pass
