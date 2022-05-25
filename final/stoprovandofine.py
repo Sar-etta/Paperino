@@ -138,7 +138,7 @@ if st.button("let's start analyzing"):
     import gtts
     import googletrans
     from gtts import gTTS
-   from googletrans import Translator
+    from googletrans import Translator
 
     translator = Translator()
 
