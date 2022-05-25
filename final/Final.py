@@ -149,8 +149,17 @@ if option == 'Yes':
   for _, row in new_tweets_df.iterrows():
     text = row["text"]
     itrans = translator.translate (text, dest = targetl)
+    all_tweets_translation = itrans.text
     #st.write('the translation: ', itrans.text)
   with st.expander("Click here and you will find the translation of the tweets"):
-    st.write('the translation: ', itrans.text)
+    st.write('the translation: ', all_tweets_translation)
 else:
   pass
+
+#########################################à
+
+st.markdown("""---""")
+
+st.write("Credits:")
+st.write("""
+- ##########""")
