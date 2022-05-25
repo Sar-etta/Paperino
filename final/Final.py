@@ -142,6 +142,8 @@ st.write(tweets_df_json)
 # Iterate over key/value pairs in dict and print them
 #for key, value in tweets_df_json.items():
 #    st.write(key, ' : ', value)
+# --> con il codice commentato alla linea 137, se provavo a ordinarlo con questo for-loop mi diceva che non si poteva perché non dict
+#MI DA SEMPRE ERROREEEEEEEEE
 
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
