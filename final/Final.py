@@ -129,13 +129,10 @@ import googletrans
 from gtts import gTTS
 from googletrans import Translator
 
-import json,requests
-from pprint import pprint
-
 translator = Translator()
 
-tweets_df_json = json.dumps(new_tweets_df.text.to_dict()) #new_tweets_df.text.to_json() --> sono la stessa cosa
-st.write(tweets_df_json)
+#tweets_df_json = json.dumps(new_tweets_df.text.to_dict()) #new_tweets_df.text.to_json() --> sono la stessa cosa
+#st.write(tweets_df_json)
 #TypeError: the JSON object must be str, bytes or bytearray, not NoneType
 #this is the  error, but with the lines before (*type...) on googlecollab it says it is a string, so I don't get what I should do
 
@@ -148,7 +145,9 @@ st.write(tweets_df_json)
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
   targetl = st.text_input(" write the two letter of the destination language: ", "it")
-  trans= translator.translate (tweets_df_json, dest= targetl)
-  st.write('the translation: ', trans.text)
+  for _, row in new_tweets_df.iterrows():
+    text = row["text"]
+    itrans = translator.translate (text, dest = targetl)
+    st.write('the translation: ', itrans.text)
 else:
   pass
