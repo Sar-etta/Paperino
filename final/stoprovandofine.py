@@ -7,6 +7,11 @@ st.title("Sentiment Analysis through Twitter")
 st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarized the general opinion of it.")
 
 click_to_start = st.button("let's start analyzing")
+
+if st.button('Say hello'):
+     st.write('Why hello there')
+ else:
+     st.write('Goodbye')
 #################################################################################
 
 import tweepy as tw
