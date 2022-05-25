@@ -19,7 +19,7 @@ auth = tw.OAuthHandler(my_api_key, my_api_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
 search_query = st.text_input('What topic are you interest in?', help='insert # before typing the topic you are interested in!')   #-filter:retweets)
-if search_query != None:
+if search_query != ' ':
   #
 ########################################################################################
   
