@@ -4,7 +4,7 @@ urlfoto = "https://raw.githubusercontent.com/Sar-etta/Paperino/main/final/twitte
 st.image(urlfoto)
 
 st.title("Sentiment Analysis through Twitter")
-st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarized the general opinion of it.")
+st.caption("The aim of this app is to analyze the sentiment of a certain topic, through an hashtag, and to give as a result a pie-chart that shows summarized the general opinion of it. To use it, just write down the topic you want analyzed, for example: #Zendaya, #covid and so on, and at the end one can decide if translating the tweets or not.")
 
 import tweepy as tw
 
@@ -16,7 +16,7 @@ my_api_secret = "QPjcJF2cZAtmoNira5svbAXkKWuL7Ou0FnFcWpiyRScfvL7dzl"
 auth = tw.OAuthHandler(my_api_key, my_api_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
-search_query = st.text_input('What topic are you interest in?', help='insert # before typing the topic you are interested in!')   #-filter:retweets)
+search_query = st.text_input('What topic are you interest in?', help='A suggestion: insert # before typing the topic you are interested in!')   #-filter:retweets)
   
   
 # get tweets from the API
@@ -30,7 +30,7 @@ tweets_copy = []
 for tweet in tweets:
     tweets_copy.append(tweet)
     
-st.write("Total Tweets fetched:", len(tweets_copy))
+st.write("In this App the total Tweets fetched is:", len(tweets_copy))
 
 st.info('Wait a moment please, the analysis will be ready soon!')
 
@@ -102,7 +102,7 @@ for el in polarity_score:
     pass
 
 #st.write('These are the overall results of the sentiment analysis:', textColor = #5F9EA0)
-st.write('these are the overall result of the analysis:')
+st.subheader('These are the overall result of the analysis:')
 st.write('the negative tweets analyzed are: ', negative)
 st.write('the neutral tweets analyzed are: ', neutral)
 st.write('the positive tweets analyzed are: ', positive)
