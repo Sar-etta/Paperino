@@ -83,7 +83,7 @@ if search_query is not None:
 ##################################################################################
 
   import textblob
-from textblob import TextBlob
+  from textblob import TextBlob
 
   polarity_score = []
 #for-loop to analyze the sentiment
