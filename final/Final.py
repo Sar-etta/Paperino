@@ -145,11 +145,12 @@ translator = Translator()
 st.subheader("Here you can translate the Tweets fetched")
 option = st.selectbox('Do you want to translate the tweets?', ('Yes', 'No'))
 if option == 'Yes':
-  targetl = st.text_input(" write the two letter of the destination language: ","it", help="write a two letter code for the language you want to translate in. For example: it, de, es, en...")
+  targetl = st.text_input(" Write the two letter of the destination language: ","it", help="Write a two letter code for the language you want to translate in. For example: it, de, es, en...")
   for _, row in new_tweets_df.iterrows():
     text = row["text"]
     itrans = translator.translate (text, dest = targetl)
-    with st.expander("Click here and you will find the translation of the tweets"):
-        st.write('the translation: ', itrans.text)
+    #st.write('the translation: ', itrans.text)
+  with st.expander("Click here and you will find the translation of the tweets"):
+    st.write('the translation: ', itrans.text)
 else:
   pass
