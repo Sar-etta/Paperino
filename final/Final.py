@@ -117,7 +117,6 @@ mylabels = ["negative", "neutral", "positive"]
 
 fig = plt.figure(figsize=(10, 4))
 plt.pie(y, labels = mylabels, startangle = 90)
-plt.legend()
 plt.show() 
 
 st.balloons()
