@@ -156,8 +156,9 @@ else:
   pass
 
 ########################################
+tentativo = itrans.text
 with open('analysis_results.txt', 'w') as f:
-  for line in new_tweets_df.iterrows:
+  for line in tentativo:
     f.write(line)
     f.write('\n')
 #########################################
