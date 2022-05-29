@@ -155,7 +155,12 @@ else:
   st.info("Thank you for using this App!")
   pass
 
-#########################################à
+########################################
+with open('analysis_results.txt', 'w') as f:
+  for line in itrans:
+    f.write(line)
+    f.write('\n')
+#########################################
 
 st.markdown("""---""")
 
