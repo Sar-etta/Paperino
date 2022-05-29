@@ -109,6 +109,9 @@ st.write('- The positive tweets analyzed are: ', positive)
 
 from gtts import gTTS
 result_audio = gTTS('The negative tweets analyzed are: ', negative)
+result_audio.save('audio.mp3')
+my_result_audio = open('audio.mp3', 'rb')
+st.audio(my_result_audio, format='audio/mp3')
 
 import matplotlib.pyplot as plt
 import numpy as np
