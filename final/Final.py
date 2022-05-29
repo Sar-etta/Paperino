@@ -107,6 +107,13 @@ st.write('- The negative tweets analyzed are: ', negative)
 st.write('- The neutral tweets analyzed are: ', neutral)
 st.write('- The positive tweets analyzed are: ', positive)
 
+########################################
+
+result_text = ['Negative Tweets: ',negative, 'Neutral Tweets: ',neutral, 'Positive Tweets: ',positive]
+with open('Analysis_Results.txt', 'w') as f:
+    for line in result_text:
+        f.write(line)
+        f.write('\n')
 
 
 import matplotlib.pyplot as plt
@@ -155,12 +162,6 @@ else:
   st.info("Thank you for using this App!")
   pass
 
-########################################
-tentativo = itrans.text
-with open('analysis_results.txt', 'w') as f:
-  for line in tentativo:
-    f.write(line)
-    f.write('\n')
 #########################################
 
 st.markdown("""---""")
