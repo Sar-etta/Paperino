@@ -157,7 +157,7 @@ else:
 
 ########################################
 with open('analysis_results.txt', 'w') as f:
-  for line in itrans.text:
+  for line in new_tweets_df.iterrows:
     f.write(line)
     f.write('\n')
 #########################################
