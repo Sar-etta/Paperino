@@ -107,13 +107,6 @@ st.write('- The negative tweets analyzed are: ', negative)
 st.write('- The neutral tweets analyzed are: ', neutral)
 st.write('- The positive tweets analyzed are: ', positive)
 
-########################################
-
-result_text = ['Negative Tweets: ',negative, 'Neutral Tweets: ',neutral, 'Positive Tweets: ',positive]
-with open('Analysis_Results.txt', 'w') as f:
-    for line in result_text:
-        f.write(line)
-        f.write('\n')
 
 
 import matplotlib.pyplot as plt
