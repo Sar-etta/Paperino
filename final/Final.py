@@ -107,7 +107,8 @@ st.write('- The negative tweets analyzed are: ', negative)
 st.write('- The neutral tweets analyzed are: ', neutral)
 st.write('- The positive tweets analyzed are: ', positive)
 
-
+from gtts import gTTS
+result_audio = gTTS('The negative tweets analyzed are: ', negative)
 
 import matplotlib.pyplot as plt
 import numpy as np
