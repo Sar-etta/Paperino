@@ -157,7 +157,7 @@ else:
 
 ########################################
 with open('analysis_results.txt', 'w') as f:
-  for line in itrans:
+  for line in itrans.text:
     f.write(line)
     f.write('\n')
 #########################################
