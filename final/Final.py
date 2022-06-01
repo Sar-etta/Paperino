@@ -9,8 +9,10 @@ st.caption("The aim of this app is to analyze the sentiment of a certain topic, 
 import tweepy as tw
 
 # your Twitter API key and API secret
-my_api_key = "OdbKALsXbXFIvkTtvun3lhnej"
-my_api_secret = "QPjcJF2cZAtmoNira5svbAXkKWuL7Ou0FnFcWpiyRScfvL7dzl"
+#my_api_key = "OdbKALsXbXFIvkTtvun3lhnej"
+#my_api_secret = "QPjcJF2cZAtmoNira5svbAXkKWuL7Ou0FnFcWpiyRScfvL7dzl"
+my_api_key = st.secret['my_api_key']
+my_api_secret = st.secret['my_api_secret']
 
 # authenticate
 auth = tw.OAuthHandler(my_api_key, my_api_secret)
